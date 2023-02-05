@@ -21,6 +21,9 @@ public class Project {
     @Column(name = "Project_Description", nullable=false)
     public String projectDescription;
 
+    @Column(name = "Project_Flow_Chart")
+    public String flowchartUrl;
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn
     private List<Stakeholder> stakeholder;
@@ -37,11 +40,12 @@ public class Project {
     }
 
 
-    public Project(String projectId, String projectName, String managerId, String projectDescription, List<Stakeholder> stakeholder, List<SupportTeam> supportTeamList, List<Manager> managerList) {
+    public Project(String projectId, String projectName, String managerId, String projectDescription, String flowchartUrl, List<Stakeholder> stakeholder, List<SupportTeam> supportTeamList, List<Manager> managerList) {
         this.projectId = projectId;
         this.projectName = projectName;
         this.managerId = managerId;
         this.projectDescription = projectDescription;
+        this.flowchartUrl = flowchartUrl;
         this.stakeholder = stakeholder;
         this.supportTeamList = supportTeamList;
         this.managerList = managerList;
@@ -79,6 +83,14 @@ public class Project {
         this.projectDescription = projectDescription;
     }
 
+    public String getFlowchartUrl() {
+        return flowchartUrl;
+    }
+
+    public void setFlowchartUrl(String flowchartUrl) {
+        this.flowchartUrl = flowchartUrl;
+    }
+
     public List<Stakeholder> getStakeholder() {
         return stakeholder;
     }
@@ -101,6 +113,20 @@ public class Project {
 
     public void setManagerList(List<Manager> managerList) {
         this.managerList = managerList;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "projectId='" + projectId + '\'' +
+                ", projectName='" + projectName + '\'' +
+                ", managerId='" + managerId + '\'' +
+                ", projectDescription='" + projectDescription + '\'' +
+                ", flowchartUrl='" + flowchartUrl + '\'' +
+                ", stakeholder=" + stakeholder +
+                ", supportTeamList=" + supportTeamList +
+                ", managerList=" + managerList +
+                '}';
     }
 
     @Override
