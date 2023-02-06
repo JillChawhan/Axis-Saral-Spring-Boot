@@ -74,7 +74,8 @@ public class Stakeholder {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Stakeholder that)) return false;
+        if (!(o instanceof Stakeholder)) return false;
+        Stakeholder that = (Stakeholder) o;
         return getStakeholderId().equals(that.getStakeholderId());
     }
 

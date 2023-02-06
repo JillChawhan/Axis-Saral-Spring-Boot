@@ -88,7 +88,8 @@ public class Manager {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Manager manager)) return false;
+        if (!(o instanceof Manager)) return false;
+        Manager manager = (Manager) o;
         return getManagerId().equals(manager.getManagerId());
     }
 

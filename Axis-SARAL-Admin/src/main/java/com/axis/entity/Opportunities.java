@@ -106,7 +106,8 @@ public class Opportunities {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Opportunities that)) return false;
+        if (!(o instanceof Opportunities)) return false;
+        Opportunities that = (Opportunities) o;
         return getProjectId().equals(that.getProjectId());
     }
 

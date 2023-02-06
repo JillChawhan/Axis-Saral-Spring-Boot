@@ -74,7 +74,8 @@ public class AppointmentLetter {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof AppointmentLetter that)) return false;
+		if (!(o instanceof AppointmentLetter)) return false;
+		AppointmentLetter that = (AppointmentLetter) o;
 		return getAppointId() == that.getAppointId();
 	}
 

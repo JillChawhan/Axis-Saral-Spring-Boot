@@ -85,7 +85,8 @@ public class SupportTeam {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof SupportTeam that)) return false;
+        if (!(o instanceof SupportTeam)) return false;
+        SupportTeam that = (SupportTeam) o;
         return getEmployeeId().equals(that.getEmployeeId());
     }
 

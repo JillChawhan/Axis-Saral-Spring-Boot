@@ -14,8 +14,11 @@
 	<name>Axis-Saral-Email</name>
 	<description>Spring Boot Email Notifications</description>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
 
@@ -61,5 +64,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<packaging>jar</packaging>
 
 </project>

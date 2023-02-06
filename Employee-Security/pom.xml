@@ -14,8 +14,11 @@
 	<name>Employee-Security</name>
 	<description>Spring Boot Security For Employee</description>
 	<properties>
-		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -93,7 +96,15 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 	<repositories>
 		<repository>
@@ -106,4 +117,5 @@
 		</repository>
 	</repositories>
 
+	<packaging>jar</packaging>
 </project>

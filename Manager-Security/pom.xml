@@ -14,8 +14,11 @@
 	<name>manager-security</name>
 	<description>Manager Security Spring</description>
 	<properties>
-		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -74,6 +77,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>9</source>
+					<target>9</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<repositories>
@@ -86,5 +97,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
+	<packaging>jar</packaging>
 
 </project>

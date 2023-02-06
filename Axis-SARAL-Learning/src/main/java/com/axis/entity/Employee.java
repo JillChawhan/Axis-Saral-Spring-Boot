@@ -175,10 +175,12 @@ public class Employee {
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Employee employee)) return false;
+        if (!(o instanceof Employee)) return false;
+        Employee employee = (Employee) o;
         return getEmployeeId().equals(employee.getEmployeeId());
     }
 

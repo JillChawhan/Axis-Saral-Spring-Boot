@@ -148,7 +148,8 @@ public class SalarySlip {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof SalarySlip that)) return false;
+		if (!(o instanceof SalarySlip)) return false;
+		SalarySlip that = (SalarySlip) o;
 		return getSalaryId() == that.getSalaryId();
 	}
 

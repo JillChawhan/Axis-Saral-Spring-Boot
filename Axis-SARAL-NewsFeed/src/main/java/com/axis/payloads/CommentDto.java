@@ -56,7 +56,8 @@ public class CommentDto {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CommentDto that)) return false;
+        if (!(o instanceof CommentDto)) return false;
+        CommentDto that = (CommentDto) o;
         return getCommentId().equals(that.getCommentId());
     }
 

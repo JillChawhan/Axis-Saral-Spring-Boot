@@ -69,7 +69,8 @@ public class Admin {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Admin admin)) return false;
+        if (!(o instanceof Admin)) return false;
+        Admin admin = (Admin) o;
         return getMobileNo() == admin.getMobileNo();
     }
 

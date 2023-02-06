@@ -63,7 +63,8 @@ public class JoiningLetter {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof JoiningLetter that)) return false;
+		if (!(o instanceof JoiningLetter)) return false;
+		JoiningLetter that = (JoiningLetter) o;
 		return getJoiningId() == that.getJoiningId();
 	}
 

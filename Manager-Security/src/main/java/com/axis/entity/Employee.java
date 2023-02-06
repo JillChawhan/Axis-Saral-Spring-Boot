@@ -142,17 +142,6 @@ public class Employee {
         this.project = project;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Employee employee)) return false;
-        return getEmployeeId().equals(employee.getEmployeeId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getEmployeeId());
-    }
 
     @Override
     public String toString() {
@@ -169,5 +158,18 @@ public class Employee {
                 ", manager=" + manager +
                 ", project=" + project +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee employee = (Employee) o;
+        return getEmployeeId().equals(employee.getEmployeeId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getEmployeeId());
     }
 }

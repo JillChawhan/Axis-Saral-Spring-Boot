@@ -86,7 +86,8 @@ public class IncrementLetter {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof IncrementLetter that)) return false;
+		if (!(o instanceof IncrementLetter)) return false;
+		IncrementLetter that = (IncrementLetter) o;
 		return getIncrementId() == that.getIncrementId();
 	}
 

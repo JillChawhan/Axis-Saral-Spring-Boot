@@ -89,7 +89,8 @@ public class NewsFeed {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof NewsFeed newsFeed)) return false;
+        if (!(o instanceof NewsFeed)) return false;
+        NewsFeed newsFeed = (NewsFeed) o;
         return getNewsFeedId() == newsFeed.getNewsFeedId();
     }
 
